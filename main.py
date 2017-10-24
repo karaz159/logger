@@ -39,7 +39,7 @@ elif a.month == 10:
 elif a.month == 11:
     month = './logs/'+str(a.year)+'/Ноябрь.txt'
 elif a.month == 12:
-    month = './logs/'+str(a.year)+'/Декаб.txt'
+    month = './logs/'+str(a.year)+'/Декабрь.txt'
 
 #month = str(a.month) + '.txt'
 date_format = ['\n---- ',str(a.day),'-',str(a.month),'-',str(a.year),' Запуск Скрипта! ----\n\n' ]
