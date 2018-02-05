@@ -50,7 +50,7 @@ TF = open(month, 'a', encoding = 'utf-8')
 TF.writelines(date_format)
 TF.close()
 
-bot.send_message(config.karaz159, 'Запущен!')
+#bot.send_message(config.karaz159, 'Запущен!')
 
 @bot.message_handler(commands = ['end'])
 def end_of_time(message):
@@ -64,7 +64,7 @@ def end_of_time(message):
 def repeat_all_messages(message): # Название функции не играет никакой роли, в принципе
     TF = open(month, 'a', encoding = 'utf-8')
     time = datetime.now()
-    answer = [str(time.hour),':', str(time.minute),' ',message.text,'\n']
+    answer = [str(time.hour),':', str(time.minute),' (',message.chat.first_name ') - ',message.text,'\n']
     TF.writelines(answer)
     TF.close()
     bot.send_message(message.chat.id, 'Записано!')
